@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  web:
+    build: .
+    command: bash -c "python models.py && python app.py"
+    volumes:
+      - .:/testaiohttp
+    ports:
+      - "8080:8080"
